@@ -2,5 +2,5 @@
 {
   programs.ferdium = {
     enable = true;
-  }
+  };
 }

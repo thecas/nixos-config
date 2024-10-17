@@ -142,9 +142,9 @@
         "$mainMod, F1, exec, show-keybinds"
 
         # keybindings
-        "$mainMod, Return, exec, wezterm start --always-new-process"
+        "$mainMod, Return, exec, wezterm --config-file=$HOME/.config/wezterm/wezterm.lua"
         "ALT, Return, exec, [float; center] wezterm start --always-new-process"
-        "$mainMod SHIFT, Return, exec, [fullscreen] wezterm start --always-new-process"
+        "$mainMod SHIFT, Return, exec, [fullscreen] wezterm start --always-new-process --config-file=$HOME/.config/wezterm/wezterm.lua"
         "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] floorp'"
         "$mainMod, Q, killactive,"
         "$mainMod, F, fullscreen, 0"
@@ -233,6 +233,14 @@
         "$mainMod ALT, j, moveactive, 0 80"
         "$mainMod ALT, k, moveactive, 0 -80"
         "$mainMod ALT, l, moveactive, 80 0"
+
+        "bind = $mainMod, z, exec, zen"
+        "bind = $mainMod SHIFT, b, exec, firefox"
+        "bind = $mainMod SHIFT, z, exec, zeditor"
+        "bind = $mainMod SHIFT, p, exec, kitty --class ncpamixer -e ncpamixer"
+        "bind = $mainMod SHIFT, f, exec, ferdium --ozone-platform=wayland --enable-features-WaylandWindowDecorations"
+        "bind = $mainModSHIFT, c, exec, kitty --class clipse -e clipse"
+
 
         # media and volume controls
         # ",XF86AudioMute,exec, pamixer -t"

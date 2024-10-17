@@ -69,8 +69,8 @@ in
     vivaldi
     brave
     chromium
-    ferdium
     inputs.zen-browser.packages."${system}".specific
+    ferdium
 
     ## audio
     ncpamixer
@@ -101,6 +101,7 @@ in
     winetricks
     wineWowPackages.wayland
     zenity
+    zoom-us
 
 
     # C / C++
