@@ -16,7 +16,7 @@
       end
 
       config.check_for_updates = false
-      config.automatically_reload_config = false
+      config.automatically_reload_config = true
 
       config.font = wezterm.font("CaskaydiaCove Nerd Font")
       config.font_size = ${if (host == "laptop") then "10" else "12"}
@@ -26,7 +26,7 @@
       config.default_prog = { 'zsh' }
 
       config.window_decorations = "NONE"
-      config.window_background_opacity = 0.8
+      config.window_background_opacity = 0.7
       config.window_close_confirmation = 'NeverPrompt'
       config.window_padding = {
         left = 5,

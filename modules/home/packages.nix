@@ -27,7 +27,7 @@ in
     killall
     lazygit
     libnotify
-	  man-pages					            	  # extra man pages
+	man-pages					            	  # extra man pages
     mimeo
     mpv                               # video player
     ncdu                              # disk space
@@ -68,10 +68,14 @@ in
     #firefox
     vivaldi
     brave
-    ungoogled-chromium
+    chromium
     ferdium
     inputs.zen-browser.packages."${system}".specific
 
+    ## audio
+    ncpamixer
+    pavucontrol
+    #spotify
 
     ## CLI
     cbonsai                           # terminal screensaver
@@ -79,6 +83,7 @@ in
     pipes                             # terminal screensaver
     sl
     tty-clock                         # cli clock
+    killall
 
     ## GUI Apps
     audacity
@@ -91,7 +96,6 @@ in
     pitivi                            # video editing
     qalculate-gtk                     # calculator
     soundwireserver
-    thunderbird
     vlc
     mpv
     winetricks
