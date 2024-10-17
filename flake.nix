@@ -12,10 +12,13 @@
 
     hypr-contrib.url = "github:hyprwm/contrib";
     hyprpicker.url = "github:hyprwm/hyprpicker";
+    iio-hyprland.url = "github:JeanSchoeller/iio-hyprland";
+
 
     alejandra.url = "github:kamadorueda/alejandra/3.0.0";
 
     nix-gaming.url = "github:fufexan/nix-gaming";
+    zen-browser.url = "github:ch4og/zen-browser-flake";
 
 
     hyprland = {

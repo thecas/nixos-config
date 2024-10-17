@@ -70,6 +70,8 @@ in
     brave
     ungoogled-chromium
     ferdium
+    inputs.zen-browser.packages."${system}".specific
+
 
     ## CLI
     cbonsai                           # terminal screensaver

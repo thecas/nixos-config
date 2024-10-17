@@ -349,7 +349,10 @@
     };
 
     extraConfig = "
-      monitor=,preferred,auto,auto
+      monitor=eDP-1,highres,auto,2
+      monitor=DP-1,highres,auto,1
+      #monitor=HDMI-A-1,highres,auto,2
+      monitor=HDMI-A-1,disable
 
       xwayland {
         force_zero_scaling = true

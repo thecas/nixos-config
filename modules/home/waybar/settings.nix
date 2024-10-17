@@ -30,7 +30,7 @@ in
     modules-left= [
         "custom/launcher"
         "hyprland/workspaces"
-        "tray"
+
     ];
     modules-center= [
         "clock"
@@ -42,6 +42,7 @@ in
         "pulseaudio"
         "network"
         "battery"
+        "tray"
         "custom/notification"
     ];
     clock= {
@@ -129,7 +130,7 @@ in
         tooltip-format = "{time}";
     };
     "custom/launcher"= {
-        format= "S";
+        format= "";
         on-click= "rofi -show drun";
         on-click-right= "wallpaper-picker";
         tooltip= "false";
