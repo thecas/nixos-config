@@ -1,8 +1,9 @@
-{ pkgs, config, ... }: 
+{ pkgs, config, disko, ... }:
 {
   imports = [
     ./hardware-configuration.nix
     ./../../modules/core
+    ./disk-config.nix
   ];
 
   environment.systemPackages = with pkgs; [
@@ -11,10 +12,10 @@
     cpupower-gui
     powertop
   ];
-  
-  services = {    
+
+  services = {
     power-profiles-daemon.enable = true;
- 
+
     upower = {
       enable = true;
       percentageLow = 20;
