@@ -59,13 +59,13 @@
         modules = [ ./hosts/desktop ];
         specialArgs = { host="desktop"; inherit self inputs username ; };
       };
-      laptop = nixpkgs.lib.nixosSystem {
+      cas-laptop = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
             ./hosts/laptop
             disko.nixosModules.disko
         ];
-        specialArgs = { host="laptop"; inherit self inputs username ; };
+        specialArgs = { host="cas-laptop"; inherit self inputs username ; };
       };
        vm = nixpkgs.lib.nixosSystem {
         inherit system;
