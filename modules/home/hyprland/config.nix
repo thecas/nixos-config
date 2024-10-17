@@ -1,4 +1,4 @@
-{ ... }:
+{ host, ... }:
 {
   wayland.windowManager.hyprland = {
     settings = {
@@ -9,6 +9,7 @@
         "hash dbus-update-activation-environment 2>/dev/null &"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
 
+        "exec-once = iio-hyprland eDP-1 &"
         "nm-applet &"
         "poweralertd &"
         "wl-clip-persist --clipboard both &"
@@ -357,14 +358,16 @@
     };
 
     extraConfig = "
-      monitor=eDP-1,highres,auto,2
-      monitor=DP-1,highres,auto,1
-      #monitor=HDMI-A-1,highres,auto,2
-      monitor=HDMI-A-1,disable
+monitor=eDP-1,highres,auto,2
+monitor=DP-1,highres,auto,1
+#monitor=HDMI-A-1,highres,auto,2
+monitor=HDMI-A-1,disable
 
-      xwayland {
-        force_zero_scaling = true
-      }
-    ";
+xwayland {
+force_zero_scaling = true
+}
+
+env = GDK_SCALE,${if (host == "cas-laptop") then "2" else "1"}
+";
   };
 }
