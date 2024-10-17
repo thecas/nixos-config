@@ -7,6 +7,7 @@
     ./cava.nix                        # audio visualizer
     ./discord/discord.nix             # discord with gruvbox
     ./fastfetch.nix                   # fetch tool
+    ./ferdium.nix
     ./floorp/floorp.nix               # firefox based browser
     ./fzf.nix                         # fuzzy finder
     ./gaming.nix                      # packages related to gaming
