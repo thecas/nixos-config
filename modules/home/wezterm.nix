@@ -19,14 +19,14 @@
       config.automatically_reload_config = false
 
       config.font = wezterm.font("CaskaydiaCove Nerd Font")
-      config.font_size = ${if (host == "laptop") then "15" else "17"}
+      config.font_size = ${if (host == "laptop") then "10" else "12"}
       config.cell_width = 1
       config.underline_thickness = 2
 
       config.default_prog = { 'zsh' }
 
       config.window_decorations = "NONE"
-      config.window_background_opacity = 0.4
+      config.window_background_opacity = 0.8
       config.window_close_confirmation = 'NeverPrompt'
       config.window_padding = {
         left = 5,
@@ -41,7 +41,7 @@
       config.warn_about_missing_glyphs = false
 
       config.scrollback_lines = 10000
-      -- config.harfbuzz_features = { "cv30", "cv21", "cv32", "ss09" } 
+      -- config.harfbuzz_features = { "cv30", "cv21", "cv32", "ss09" }
       config.freetype_load_flags = 'NO_HINTING'
 
       -- config.color_scheme = "GruvboxDarkHard"

@@ -1,8 +1,8 @@
 { host, ... }:
 let custom = {
   font = "JetBrainsMono Nerd Font";
-  font_size = "18px";
-  font_weight = "bold";
+  font_size = "12px";
+  font_weight = "normal";
   text_color = "#FBF1C7";
   background_0 = "#1D2021";
   background_1 = "#282828";
@@ -17,10 +17,10 @@ let custom = {
   opacity = "1";
   indicator_height = "2px";
 };
-in 
+in
 {
   programs.waybar.settings.mainBar = with custom; {
-    position= "bottom";
+    position= "top";
     layer= "top";
     height= 28;
     margin-top= 0;
@@ -28,7 +28,7 @@ in
     margin-left= 0;
     margin-right= 0;
     modules-left= [
-        "custom/launcher" 
+        "custom/launcher"
         "hyprland/workspaces"
         "tray"
     ];
@@ -39,16 +39,17 @@ in
         "cpu"
         "memory"
         (if (host == "desktop") then "disk" else "")
-        "pulseaudio" 
+        "pulseaudio"
         "network"
         "battery"
         "custom/notification"
     ];
     clock= {
+        interval = 1;
         calendar = {
           format = { today = "<span color='#98971A'><b>{}</b></span>"; };
         };
-        format = "  {:%H:%M}";
+        format = "  {:%H:%M:%OS}";
         tooltip= "true";
         tooltip-format= "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
         format-alt= "  {:%d/%m}";
@@ -59,24 +60,20 @@ in
         format = "{icon}";
         on-click= "activate";
         format-icons= {
-            "1"  = "I";
-            "2"  = "II";
-            "3"  = "III";
-            "4"  = "IV";
-            "5"  = "V";
-            "6"  = "VI";
-            "7"  = "VII";
-            "8"  = "VIII";
-            "9"  = "IX";
-            "10" = "X";
+            "1"  = "1";
+            "2"  = "2";
+            "3"  = "3";
+            "4"  = "4";
+            "5"  = "5";
+            "6"  = "6";
+            "7"  = "7";
+            "8"  = "8";
+            "9"  = "9";
+            "10" = "0";
             sort-by-number= true;
         };
         persistent-workspaces = {
             "1"= [];
-            "2"= [];
-            "3"= [];
-            "4"= [];
-            "5"= [];
         };
     };
     cpu= {
@@ -132,9 +129,9 @@ in
         tooltip-format = "{time}";
     };
     "custom/launcher"= {
-        format= "";
+        format= "S";
         on-click= "rofi -show drun";
-        on-click-right= "wallpaper-picker"; 
+        on-click-right= "wallpaper-picker";
         tooltip= "false";
     };
     "custom/notification" = {

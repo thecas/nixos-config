@@ -1,7 +1,7 @@
 { ... }:
 let custom = {
   font = "JetBrainsMono Nerd Font";
-  font_size = "18px";
+  font_size = "14px";
   font_weight = "bold";
   text_color = "#FBF1C7";
   background_0 = "#1D2021";
@@ -18,7 +18,7 @@ let custom = {
   opacity = "1";
   indicator_height = "2px";
 };
-in 
+in
 {
   programs.waybar.style = with custom; ''
     * {
@@ -85,11 +85,11 @@ in
       margin-right: 10px;
       color: ${text_color};
     }
-    
+
     #pulseaudio {
       margin-left: 15px;
     }
-    
+
     #custom-notification {
       margin-left: 15px;
       padding-right: 2px;

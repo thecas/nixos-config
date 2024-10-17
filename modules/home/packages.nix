@@ -1,6 +1,6 @@
-{ inputs, pkgs, ... }: 
-let 
-  _2048 = pkgs.callPackage ../../pkgs/2048/default.nix {}; 
+{ inputs, pkgs, ... }:
+let
+  _2048 = pkgs.callPackage ../../pkgs/2048/default.nix {};
 in
 {
   home.packages = (with pkgs; [
@@ -17,7 +17,7 @@ in
     entr                              # perform action when file change
     fd                                # find replacement
     ffmpeg
-    file                              # Show file information 
+    file                              # Show file information
     gtt                               # google translate TUI
     gifsicle                          # gif utility
     gtrash                            # rm replacement, put deleted files in system trash
@@ -53,8 +53,25 @@ in
     yt-dlp-light
     xdg-utils
     xxd
+    imgcat
 
-    ## CLI 
+    ##Editor
+    jetbrains.phpstorm
+    zed-editor
+    #vscode
+
+    ## Browsers
+    #firefox-unwrapped
+    #firefox-esr-128-unwrapped
+    firefox-devedition-unwrapped
+    #firefox-beta-unwrapped
+    #firefox
+    vivaldi
+    brave
+    ungoogled-chromium
+    ferdium
+
+    ## CLI
     cbonsai                           # terminal screensaver
     cmatrix
     pipes                             # terminal screensaver
@@ -74,9 +91,11 @@ in
     soundwireserver
     thunderbird
     vlc
+    mpv
     winetricks
     wineWowPackages.wayland
     zenity
+
 
     # C / C++
     gcc
