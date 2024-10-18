@@ -60,7 +60,10 @@
     nixosConfigurations = {
       cas-desktop = nixpkgs.lib.nixosSystem {
         inherit system;
-        modules = [ ./hosts/desktop ];
+        modules = [
+          ./hosts/desktop
+          disko.nixosModules.disko
+        ];
         specialArgs = { host="cas-desktop"; inherit self inputs usernames ; };
       };
       cas-laptop = nixpkgs.lib.nixosSystem {

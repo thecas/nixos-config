@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, disko, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -8,9 +8,5 @@
 
   powerManagement.cpuFreqGovernor = "performance";
 
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-  };
-  services.blueman.enable = true;
+
 }
