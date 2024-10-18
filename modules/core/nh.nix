@@ -6,7 +6,7 @@
       enable = true;
       extraArgs = "--keep-since 7d --keep 5";
     };
-    flake = "/home/cas/nixos-config";
+    # flake = "/home/cas/nixos";
   };
 
   environment.systemPackages = with pkgs; [

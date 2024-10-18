@@ -4,7 +4,7 @@ let
 
   userConfig = username: {
     imports =
-      if (host == "desktop") then
+      if (host == "cas-desktop") then
         [ ./../home/default.desktop.nix ]
       else [ ./../home ];
     home.username = username;

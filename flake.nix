@@ -58,10 +58,10 @@
   in
   {
     nixosConfigurations = {
-      desktop = nixpkgs.lib.nixosSystem {
+      cas-desktop = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [ ./hosts/desktop ];
-        specialArgs = { host="desktop"; inherit self inputs usernames ; };
+        specialArgs = { host="cas-desktop"; inherit self inputs usernames ; };
       };
       cas-laptop = nixpkgs.lib.nixosSystem {
         inherit system;

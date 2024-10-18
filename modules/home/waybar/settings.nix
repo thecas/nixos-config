@@ -38,7 +38,7 @@ in
     modules-right= [
         "cpu"
         "memory"
-        (if (host == "desktop") then "disk" else "")
+        (if (host == "cas-desktop") then "disk" else "")
         "pulseaudio"
         "network"
         "battery"
