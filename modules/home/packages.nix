@@ -54,6 +54,7 @@ in
     xdg-utils
     xxd
     imgcat
+    sshfs
 
     ##Editor
     jetbrains.phpstorm

@@ -1,6 +1,6 @@
-{inputs, username, host, ...}: {
+{inputs, usernames, host, ...}: {
   imports = [
-    ./aseprite/aseprite.nix           # pixel art editor
+    #./aseprite/aseprite.nix           # pixel art editor
     ./audacious.nix                   # music player
     ./bat.nix                         # better cat command
     ./btop.nix                        # resouces monitor

@@ -48,7 +48,7 @@
 
   outputs = { nixpkgs, self, disko, ...} @ inputs:
   let
-    username = "cas";
+    usernames = [ "cas" "ryan" ];
     system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;
@@ -61,7 +61,7 @@
       desktop = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [ ./hosts/desktop ];
-        specialArgs = { host="desktop"; inherit self inputs username ; };
+        specialArgs = { host="desktop"; inherit self inputs usernames ; };
       };
       cas-laptop = nixpkgs.lib.nixosSystem {
         inherit system;
@@ -69,12 +69,12 @@
             ./hosts/laptop
             disko.nixosModules.disko
         ];
-        specialArgs = { host="cas-laptop"; inherit self inputs username ; };
+        specialArgs = { host="cas-laptop"; inherit self inputs usernames ; };
       };
        vm = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [ ./hosts/vm ];
-        specialArgs = { host="vm"; inherit self inputs username ; };
+        specialArgs = { host="vm"; inherit self inputs usernames ; };
       };
     };
   };

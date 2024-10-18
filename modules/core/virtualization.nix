@@ -1,7 +1,17 @@
-{ config, pkgs, username, ... }:
+{ config, pkgs, usernames, ... }:
+
+let
+  lib = pkgs.lib;
+in
 {
   # Add user to libvirtd group
-  users.users.${username}.extraGroups = [ "libvirtd" ];
+  users.users = lib.listToAttrs (map (username: {
+    name = username;
+    value = {
+      isNormalUser = true;
+      extraGroups = [ "libvirtd" ];
+    };
+  }) usernames);
 
   # Install necessary packages
   environment.systemPackages = with pkgs; [
@@ -26,5 +36,6 @@
     };
     spiceUSBRedirection.enable = true;
   };
+
   services.spice-vdagentd.enable = true;
 }
