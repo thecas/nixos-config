@@ -103,6 +103,10 @@
             "command": "swaylock"
           },
           {
+            "label": "󰍃  Log off",
+            "command": "systemctl poweroff"
+          },
+          {
             "label": "  Reboot",
             "command": "systemctl reboot"
           },
