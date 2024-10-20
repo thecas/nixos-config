@@ -6,6 +6,10 @@
     ./disk-config.nix
   ];
 
+  environment.systemPackages = with pkgs; [
+    cryptsetup
+  ];
+
   powerManagement.cpuFreqGovernor = "performance";
 
 
