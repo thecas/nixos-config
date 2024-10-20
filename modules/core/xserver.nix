@@ -1,5 +1,7 @@
 { pkgs, ... }:
 {
+  programs.regreet.enable = true;
+
   services = {
     xserver = {
       enable = true;
@@ -9,6 +11,7 @@
     displayManager.autoLogin = {
       enable = false;
     };
+
     libinput = {
       enable = true;
       # mouse = {
