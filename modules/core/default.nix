@@ -8,6 +8,7 @@
     ./nh.nix
     ./pipewire.nix
     ./program.nix
+    ./regreet.nix
     ./security.nix
     ./services.nix
     ./steam.nix
