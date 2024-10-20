@@ -9,7 +9,7 @@
         "hash dbus-update-activation-environment 2>/dev/null &"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
 
-        "exec-once = iio-hyprland eDP-1 &"
+        #"${if (host == "cas-laptop") then "exec-once = iio-hyprland eDP-1 &"}"
         "nm-applet &"
         "poweralertd &"
         "wl-clip-persist --clipboard both &"
@@ -17,7 +17,7 @@
         "waybar &"
         "swaync &"
         "hyprctl setcursor Bibata-Modern-Ice 24 &"
-        "swww init && swww img $(find ~/Pictures/wallpapers/ -maxdepth 1 -type f) --transition-type none &"
+        #"swww init && swww img $(find ~/Pictures/wallpapers/ -maxdepth 1 -type f) --transition-type none &"
 
         "hyprlock"
 
