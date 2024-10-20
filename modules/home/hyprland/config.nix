@@ -17,9 +17,9 @@
         "waybar &"
         "swaync &"
         "hyprctl setcursor Bibata-Modern-Ice 24 &"
-        #"swww init && swww img $(find ~/Pictures/wallpapers/ -maxdepth 1 -type f) --transition-type none &"
+        "swww init && swww img $(find ~/Pictures/wallpapers/ -maxdepth 1 -type f) --transition-type none &"
 
-        "hyprlock"
+        #"hyprlock"
 
         ## App auto start
         # "[workspace 1 silent] floorp"
