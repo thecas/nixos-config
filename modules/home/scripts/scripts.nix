@@ -31,12 +31,13 @@
   rofi-power-menu = pkgs.writeScriptBin "rofi-power-menu" (builtins.readFile ./scripts/rofi-power-menu.sh);
   power-menu = pkgs.writeScriptBin "power-menu" (builtins.readFile ./scripts/power-menu.sh);
 
+  video = pkgs.writeScriptBin "video" (builtins.readFile ./scripts/video-desktop.sh);
+
   sound = if host == "cas-laptop" then
     pkgs.writeScriptBin "sound" (builtins.readFile ./scripts/sound-laptop.sh)
   else
     pkgs.writeScriptBin "sound" (builtins.readFile ./scripts/sound-desktop.sh);
 
-  screen = pkgs.writeScriptBin "screen" (builtins.readFile ./scripts/screen-desktop.sh);
 
 
 
