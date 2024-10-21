@@ -40,21 +40,39 @@
       "button-text": " Clear All "
     },
     "menubar#desktop": {
-      "menu#powermode-buttons": {
-        "label": " 󰌪 ",
+      "menu#sound-buttons": {
+        "label": "  ",
         "position": "left",
         "actions": [
           {
-            "label": "Performance",
-            "command": "powerprofilesctl set performance"
+            "label": "Speakers",
+            "command": "sound speakers"
           },
           {
-            "label": "Balanced",
-            "command": "powerprofilesctl set balanced"
+            "label": "Headset",
+            "command": "sound headset"
           },
           {
-            "label": "Power-saver",
-            "command": "powerprofilesctl set power-saver"
+            "label": "Soundbar",
+            "command": "sound soundbar"
+          }
+        ]
+      },
+      "menu#screen-buttons": {
+        "label": " 󰍹 ",
+        "position": "left",
+        "actions": [
+          {
+            "label": "Monitor",
+            "command": "sound speakers"
+          },
+          {
+            "label": "TV-Only",
+            "command": "sound headset"
+          },
+          {
+            "label": "Both screens",
+            "command": "sound soundbar"
           }
         ]
       },
