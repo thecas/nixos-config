@@ -1,4 +1,4 @@
-{pkgs, ...}: let
+{pkgs, host, ...}: let
   wall-change = pkgs.writeShellScriptBin "wall-change" (builtins.readFile ./scripts/wall-change.sh);
   wallpaper-picker = pkgs.writeShellScriptBin "wallpaper-picker" (builtins.readFile ./scripts/wallpaper-picker.sh);
 
@@ -31,7 +31,12 @@
   rofi-power-menu = pkgs.writeScriptBin "rofi-power-menu" (builtins.readFile ./scripts/rofi-power-menu.sh);
   power-menu = pkgs.writeScriptBin "power-menu" (builtins.readFile ./scripts/power-menu.sh);
 
-  sound = pkgs.writeScriptBin "sound" (builtins.readFile ${if (host == "cas-laptop") then "./scripts/sound-laptop.sh" else "./scripts/sound-desktop.sh"});
+  sound = if host == "cas-laptop" then
+    pkgs.writeScriptBin "sound" (builtins.readFile ./scripts/sound-laptop.sh)
+  else
+    pkgs.writeScriptBin "sound" (builtins.readFile ./scripts/sound-desktop.sh);
+
+  #sound = pkgs.writeScriptBin "sound" (builtins.readFile ./scripts/sound-laptop.sh);
 in {
   home.packages = with pkgs; [
     wall-change
