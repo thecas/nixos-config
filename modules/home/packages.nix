@@ -64,9 +64,9 @@ in
     ## Browsers
     #firefox-unwrapped
     #firefox-esr-128-unwrapped
-    firefox-devedition-unwrapped
+    #firefox-devedition-unwrapped
     #firefox-beta-unwrapped
-    #firefox
+    firefox
     vivaldi
     brave
     chromium

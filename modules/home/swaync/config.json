@@ -41,7 +41,7 @@
     },
     "menubar#desktop": {
       "menu#sound-buttons": {
-        "label": "  ",
+        "label": "",
         "position": "left",
         "actions": [
           {
@@ -59,7 +59,7 @@
         ]
       },
       "menu#screen-buttons": {
-        "label": " 󰍹 ",
+        "label": "󰍹",
         "position": "left",
         "actions": [
           {
@@ -72,12 +72,12 @@
           },
           {
             "label": "Both screens",
-            "command": "sound soundbar"
+            "command": "hyprctl keyword monitor HDMI-A-1,3840x2160@60,0x0,2"
           }
         ]
       },
       "menu#screenshot": {
-        "label": "  ",
+        "label": "",
         "position": "left",
         "actions": [
           {
@@ -91,7 +91,7 @@
         ]
       },
       "menu#record": {
-        "label": " 󰕧 ",
+        "label": "󰕧",
         "position": "left",
         "actions": [
           {
@@ -122,7 +122,7 @@
           },
           {
             "label": "󰍃  Log off",
-            "command": "systemctl poweroff"
+            "command": "hyprctl dispatch exit"
           },
           {
             "label": "  Reboot",
@@ -145,7 +145,7 @@
       "collapse-button-label": "",
       "show-per-app": true,
       "show-per-app-icon": true,
-      "show-per-app-label": false
+      "show-per-app-label": true
     },
     "dnd": {
       "text": " Do Not Disturb"

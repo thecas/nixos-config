@@ -1,20 +1,25 @@
 #!/usr/bin/env zsh
-if [[ $1 =~ ^(speaker) ]]
+if [[ $1 =~ ^(monitor) ]]
 then
-    echo "switching to speakers"
+    echo "switching to monitor"
     TARGET_SINK_NAME="alsa_output.pci-0000_13_00.6.pro-output-0"
     TARGET_SOURCE_NAME="alsa_input.usb-046d_HD_Pro_Webcam_C920-02.pro-input-0"
-elif [[ $1 =~ ^(soundbar) ]]
+    hyprctl keyword monitor HDMI-A-1, disable
+elif [[ $1 =~ ^(tv) ]]
 then
-    echo "switching to soundbar"
+    echo "switching to tv"
+    hyprctl keyword monitor HDMI-A-1,3840x2160@60,0x0,2
+    hyprctl keyword monitor DP-1, disable
     TARGET_SINK_NAME="alsa_output.pci-0000_13_00.1.pro-output-7"
     TARGET_SOURCE_NAME="alsa_input.usb-046d_HD_Pro_Webcam_C920-02.pro-input-0"
 
-elif [[ $1 =~ ^(headset) ]]
+elif [[ $1 =~ ^(both) ]]
 then
-    echo "switching to over-ear"
-    TARGET_SINK_NAME="alsa_output.usb-Logitech_PRO_X_Wireless_Gaming_Headset-00.pro-output-0"
-    TARGET_SOURCE_NAME="alsa_input.usb-Logitech_PRO_X_Wireless_Gaming_Headset-00.pro-input-0"
+    echo "switching to both"
+    hyprctl keyword monitor HDMI-A-1,3840x2160@60,0x0,2
+    hyprctl keyword monitor DP-1,3440x1440@60,3840x0,1
+    TARGET_SINK_NAME="alsa_output.pci-0000_13_00.1.pro-output-7"
+    TARGET_SOURCE_NAME="alsa_input.usb-046d_HD_Pro_Webcam_C920-02.pro-input-0"
 fi
 
 # Find the index of the desired sink

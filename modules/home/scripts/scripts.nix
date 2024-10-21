@@ -36,6 +36,10 @@
   else
     pkgs.writeScriptBin "sound" (builtins.readFile ./scripts/sound-desktop.sh);
 
+  screen = if host == "cas-desktop" then
+    pkgs.writeScriptBin "screen" (builtins.readFile ./scripts/screen-desktop.sh);
+
+
   #sound = pkgs.writeScriptBin "sound" (builtins.readFile ./scripts/sound-laptop.sh);
 in {
   home.packages = with pkgs; [
