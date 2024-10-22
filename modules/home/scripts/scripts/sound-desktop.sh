@@ -4,17 +4,20 @@ then
     echo "switching to speakers"
     TARGET_SINK_NAME="alsa_output.pci-0000_13_00.6.pro-output-0"
     TARGET_SOURCE_NAME="alsa_input.usb-046d_HD_Pro_Webcam_C920-02.pro-input-0"
+    TARGET_CARD_NAME="alsa_card.pci-0000_13_00.6"
 elif [[ $1 =~ ^(soundbar) ]]
 then
     echo "switching to soundbar"
     TARGET_SINK_NAME="alsa_output.pci-0000_13_00.1.pro-output-7"
     TARGET_SOURCE_NAME="alsa_input.usb-046d_HD_Pro_Webcam_C920-02.pro-input-0"
+    TARGET_CARD_NAME="alsa_card.pci-0000_13_00.1"
 
 elif [[ $1 =~ ^(headset) ]]
 then
     echo "switching to over-ear"
     TARGET_SINK_NAME="alsa_output.usb-Logitech_PRO_X_Wireless_Gaming_Headset-00.pro-output-0"
     TARGET_SOURCE_NAME="alsa_input.usb-Logitech_PRO_X_Wireless_Gaming_Headset-00.pro-input-0"
+    TARGET_CARD_NAME="alsa_card.usb-Logitech_PRO_X_Wireless_Gaming_Headset-00"
 fi
 
 # Find the index of the desired sink
@@ -34,6 +37,14 @@ if [ -z "$TARGET_SOURCE_INDEX" ]; then
   echo "Source not found: $TARGET_SOURCE_NAME"
   exit 1
 fi
+
+# Set all cards to the "off" profile
+for CARD in $(pactl list short cards | awk '{print $1}'); do
+  pactl set-card-profile "$CARD" off
+done
+
+# Enable the desired card and set it to the "Pro Audio" profile
+pactl set-card-profile "$TARGET_CARD_NAME" "pro-audio"
 
 # Set the default sink (output)
 pactl set-default-sink "$TARGET_SINK_INDEX"
