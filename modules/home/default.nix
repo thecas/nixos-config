@@ -32,7 +32,6 @@
     ./vscodium.nix                    # vscode forck
     ./waybar                          # status bar
     ./wezterm.nix                     # terminal
-    ./woomer.nix                      # Zoom in and out
     ./xdg-mimes.nix                   # xdg config
     ./zsh                             # shell
   ];
