@@ -115,7 +115,6 @@ in
     python312Packages.ipython
 
     inputs.alejandra.defaultPackage.${system}
-    inputs.woomer.packages.${system}.default
 
   ]);
 }

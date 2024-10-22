@@ -14,8 +14,6 @@
     hyprpicker.url = "github:hyprwm/hyprpicker";
     iio-hyprland.url = "github:JeanSchoeller/iio-hyprland";
 
-    woomer.url = "github:coffeeispower/woomer";
-
     alejandra.url = "github:kamadorueda/alejandra/3.0.0";
 
     nix-gaming.url = "github:fufexan/nix-gaming";
