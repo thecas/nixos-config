@@ -64,7 +64,6 @@
       };
 
       dwindle = {
-        no_gaps_when_only = false;
         force_split = 0;
         special_scale_factor = 1.0;
         split_width_multiplier = 1.0;
@@ -76,7 +75,6 @@
       master = {
         new_status = "master";
         special_scale_factor = 1;
-        no_gaps_when_only = false;
       };
 
       decoration = {
@@ -143,7 +141,8 @@
         "$mainMod, F1, exec, show-keybinds"
 
         # keybindings
-        "$mainMod, Return, exec, wezterm --config-file=$HOME/.config/wezterm/wezterm.lua"
+        "$mainMod, Return, exec, kitty"
+        #"$mainMod, Return, exec, wezterm --config-file=$HOME/.config/wezterm/wezterm.lua"
         "ALT, Return, exec, [float; center] wezterm start --always-new-process"
         "$mainMod SHIFT, Return, exec, [fullscreen] wezterm start --always-new-process --config-file=$HOME/.config/wezterm/wezterm.lua"
         "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] floorp'"
@@ -360,6 +359,7 @@
     extraConfig = "
 monitor=eDP-1,highres,auto,2
 monitor=DP-1,highres,auto,1
+monitor=DP-3,highres,auto,1
 #monitor=HDMI-A-1,highres,auto,2
 monitor=HDMI-A-1,disable
 

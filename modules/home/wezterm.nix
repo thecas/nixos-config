@@ -2,7 +2,7 @@
 {
   programs.wezterm = {
     enable = true;
-    package = inputs.wezterm.packages.${pkgs.system}.default;
+    #package = inputs.wezterm.packages.${pkgs.system}.default;
     extraConfig = ''
       -- Pull in the wezterm API
       local wezterm = require "wezterm"
@@ -26,7 +26,7 @@
       config.default_prog = { 'zsh' }
 
       config.window_decorations = "NONE"
-      config.window_background_opacity = 0.95
+      config.window_background_opacity = 0.95wa
       config.window_close_confirmation = 'NeverPrompt'
       config.window_padding = {
         left = 5,
