@@ -55,6 +55,7 @@ in
     xxd
     imgcat
     sshfs
+    cheese
 
     ##Editor
     jetbrains.phpstorm

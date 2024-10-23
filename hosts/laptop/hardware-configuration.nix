@@ -35,7 +35,6 @@
   # hardware.ipu6.platform = "ipu6ep";
   hardware.ipu6 = {
     enable = true;
-    #platform = "ipu6epmtl";
     platform = "ipu6ep";
   };
 
