@@ -33,6 +33,9 @@
 
   video = pkgs.writeScriptBin "video" (builtins.readFile ./scripts/video-desktop.sh);
 
+  tailscale-status = pkgs.writeScriptBin "tailscale-status" (builtins.readFile ./scripts/tailscale-status.sh);
+
+
   sound = if host == "cas-laptop" then
     pkgs.writeScriptBin "sound" (builtins.readFile ./scripts/sound-laptop.sh)
   else
