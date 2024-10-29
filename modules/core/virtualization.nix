@@ -9,9 +9,11 @@ in
     name = username;
     value = {
       isNormalUser = true;
-      extraGroups = [ "libvirtd" ];
+      extraGroups = [ "libvirtd docker" ];
     };
   }) usernames);
+
+  virtualisation.docker.enable = true;
 
   # Install necessary packages
   environment.systemPackages = with pkgs; [
