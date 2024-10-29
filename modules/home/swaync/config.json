@@ -131,6 +131,10 @@
           {
             "label": "  Shut down",
             "command": "systemctl poweroff"
+          },
+          {
+            "label": "  Full Charge",
+            "command": "tlp fullcharge BAT0"
           }
         ]
       }
