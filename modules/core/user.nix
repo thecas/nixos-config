@@ -19,6 +19,12 @@ let
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
   };
+
+  security.sudo.extraRules = [{
+    groups = [ "wheel" ];
+    commands = [ "${pkgs.light}/bin/tlp" ];
+  }];
+
 in {
   imports = [ inputs.home-manager.nixosModules.home-manager ];
   home-manager = {
