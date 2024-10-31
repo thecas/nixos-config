@@ -12,14 +12,14 @@ fi
 
 # check if it's stopped (down)
 if [ "$(echo ${status} | jq --raw-output .BackendState)" = "Stopped" ]; then
-    echo "${ICON_INACTIVE} VPN down"
+    echo "${ICON_INACTIVE} down"
     exit 0
 fi
 
 # if an exit node is active, show its hostname
 exit_node_hostname="$(echo ${status} | jq --raw-output '.Peer[] | select(.ExitNode) | .HostName')"
 if [ -n "${exit_node_hostname}" ]; then
-    echo "${ICON_ACTIVE} VPN ${exit_node_hostname}"
+    echo "${ICON_ACTIVE} ${exit_node_hostname}"
 else
-    echo "${ICON_ACTIVE} VPN up"
+    echo "${ICON_ACTIVE} up"
 fi
