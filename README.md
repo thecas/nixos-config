@@ -1,28 +1,9 @@
 <h1 align="center">
-   <img src="./.github/assets/logo/nixos-logo.png  " width="100px" /> 
+   <img src="./.github/assets/logo/nixos-logo.png  " width="100px" />
    <br>
-      Frost-Phoenix's Flakes 
+      Thecas's Flakes
    <br>
       <img src="./.github/assets/pallet/pallet-0.png" width="600px" /> <br>
-
-   <div align="center">
-      <p></p>
-      <div align="center">
-         <a href="https://github.com/Frost-Phoenix/nixos-config/stargazers">
-            <img src="https://img.shields.io/github/stars/Frost-Phoenix/nixos-config?color=FABD2F&labelColor=282828&style=for-the-badge&logo=starship&logoColor=FABD2F">
-         </a>
-         <a href="https://github.com/Frost-Phoenix/nixos-config/">
-            <img src="https://img.shields.io/github/repo-size/Frost-Phoenix/nixos-config?color=B16286&labelColor=282828&style=for-the-badge&logo=github&logoColor=B16286">
-         </a>
-         <a = href="https://nixos.org">
-            <img src="https://img.shields.io/badge/NixOS-unstable-blue.svg?style=for-the-badge&labelColor=282828&logo=NixOS&logoColor=458588&color=458588">
-         </a>
-         <a href="https://github.com/Frost-Phoenix/nixos-config/blob/main/LICENSE">
-            <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&colorA=282828&colorB=98971A&logo=unlicense&logoColor=98971A&"/>
-         </a>
-      </div>
-      <br>
-   </div>
 </h1>
 
 
@@ -44,27 +25,6 @@ Hyprlock (EXPAND)
 </p>
 </details>
 
-Here is my previous Catppuccin rice. You can find it [here](https://github.com/Frost-Phoenix/nixos-config/tree/catppuccin)
-<details>
-<summary>
-Catppuccin (EXPAND)
-</summary>
-<p align="center">
-   <img src="./.github/assets/screenshots/catppuccin/1.png" style="margin-bottom: 10px;" /> <br>
-   <img src="./.github/assets/screenshots/catppuccin/2.png" style="margin-bottom: 10px;" /> <br>
-   <img src="./.github/assets/screenshots/catppuccin/3.png" style="margin-bottom: 10px;" /> <br>
-</p>  
-   <details>
-   <summary>
-   Old Catppuccin (EXPAND)
-   </summary>
-   <p align="center">
-      <img src="./.github/assets/screenshots/catppuccin/old/1.old.png" style="margin-bottom: 10px;" /> <br>
-      <img src="./.github/assets/screenshots/catppuccin/old/2.old.png" style="margin-bottom: 10px;" /> <br>
-      <img src="./.github/assets/screenshots/catppuccin/old/3.old.png" style="margin-bottom: 10px;" /> <br>
-   </p>
-   </details>
-</details>
 
 # 🗃️ Overview
 
@@ -177,7 +137,7 @@ Git (EXPAND)
 - ```glol```  $\rightarrow$ ```git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'```
 - ```glola``` $\rightarrow$ ```git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --all```
 - ```glols``` $\rightarrow$ ```git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --stat```
-  
+
 </details>
 
 ## 🛠️ Scripts
@@ -186,7 +146,7 @@ All the scripts are in ```modules/home/scripts/scripts/``` and are exported as p
 
 <details>
 <summary>
-extract.sh 
+extract.sh
 </summary>
 
 **Description:** This script extract ```tar.gz``` archives in the current directory.
@@ -196,37 +156,37 @@ extract.sh
 
 <details>
 <summary>
-compress.sh 
+compress.sh
 </summary>
 
-**Description:** This script compress a file or a folder into a ```tar.gz``` archives which is created in the current directory with the name of the chosen file or folder. 
+**Description:** This script compress a file or a folder into a ```tar.gz``` archives which is created in the current directory with the name of the chosen file or folder.
 
 **Usage:** ```compress <file>``` or ```compress <folder>```
 </details>
 
 <details>
 <summary>
-toggle_blur.sh 
+toggle_blur.sh
 </summary>
 
-**Description:** This script toggles the Hyprland blur effect. If the blur is currently enabled, it will be disabled, and if it's disabled, it will be turned on. 
+**Description:** This script toggles the Hyprland blur effect. If the blur is currently enabled, it will be disabled, and if it's disabled, it will be turned on.
 
 **Usage:** ```toggle_blur```
 </details>
 
 <details>
 <summary>
-toggle_oppacity.sh 
+toggle_oppacity.sh
 </summary>
 
-**Description:** This script toggles the Hyperland oppacity effect. If the oppacity is currently set to 0.90, it will be set to 1, and if it's set to 1, it will be set to 0.90. 
+**Description:** This script toggles the Hyperland oppacity effect. If the oppacity is currently set to 0.90, it will be set to 1, and if it's set to 1, it will be set to 0.90.
 
 **Usage:** ```toggle_oppacity```
 </details>
 
 <details>
 <summary>
-maxfetch.sh 
+maxfetch.sh
 </summary>
 
 **Description:** This script is a modified version of the [jobcmax/maxfetch][maxfetch] script.
@@ -236,31 +196,31 @@ maxfetch.sh
 
 <details>
 <summary>
-music.sh 
+music.sh
 </summary>
 
-**Description:** This script is for managing Audacious (music player). If Audacious is currently running, it will be killed (stopping the music); otherwise, it will start Audacious in the 8th workspace and resume the music. 
+**Description:** This script is for managing Audacious (music player). If Audacious is currently running, it will be killed (stopping the music); otherwise, it will start Audacious in the 8th workspace and resume the music.
 
 **Usage:** ```music```
 </details>
 
 <details>
 <summary>
-runbg.sh 
+runbg.sh
 </summary>
 
-**Description:** This script runs a provided command along with its arguments and detaches it from the terminal. Handy for launching apps from the command line without blocking it. 
+**Description:** This script runs a provided command along with its arguments and detaches it from the terminal. Handy for launching apps from the command line without blocking it.
 
 **Usage:** ```runbg <command> <arg1> <arg2> <...>```
 </details>
 
 ## ⌨️ Keybinds
 
-View all keybinds by pressing ```$mainMod F1``` and wallpaper picker by pressing ```$mainMod w```. By default ```$mainMod``` is the ```SUPER``` key. 
+View all keybinds by pressing ```$mainMod F1``` and wallpaper picker by pressing ```$mainMod w```. By default ```$mainMod``` is the ```SUPER``` key.
 
 <details>
 <summary>
-Keybindings 
+Keybindings
 </summary>
 
 ##### show keybinds list
@@ -361,7 +321,7 @@ Keybindings
 - ```$mainMod, V, exec, cliphist list | rofi -dmenu -theme-str 'window {width: 50%;}' | cliphist decode | wl-copy```
 </details>
 
-# 🚀 Installation 
+# 🚀 Installation
 
 > [!CAUTION]
 > Applying custom configurations, especially those related to your operating system, can have unexpected consequences and may interfere with your system's normal behavior. While I have tested these configurations on my own setup, there is no guarantee that they will work flawlessly for you.
@@ -372,7 +332,7 @@ Keybindings
 
 #### 1. **Install NixOs**
 
-First install nixos using any [graphical ISO image](https://nixos.org/download.html#nixos-iso). 
+First install nixos using any [graphical ISO image](https://nixos.org/download.html#nixos-iso).
 > [!NOTE]
 > Only been tested using the Gnome graphical installer and choosing the ```No desktop``` option durring instalation.
 
@@ -389,12 +349,12 @@ cd nixos-config
 
 > [!TIP]
 > As it is better to know what a script does before running it, you are advised to read it or at least see the [Install script walkthrough](#Install-script-walkthrough) section before execution.
-   
+
 Execute and follow the installation script :
 ```bash
 ./install.sh
 ```
-  
+
 #### 4. **Reboot**
 
 After rebooting, the config should be applied, you'll be greeted by hyprlock prompting for your password.
