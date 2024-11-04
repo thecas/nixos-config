@@ -9,7 +9,7 @@
     slurp
     wl-clip-persist
     cliphist
-    wf-recorder
+    #wf-recorder
     glib
     wayland
     direnv
