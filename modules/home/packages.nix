@@ -24,6 +24,7 @@ in
     hexdump
     imv                               # image viewer
     jq                                # JSON processor
+    diskonaut			      # TUI disk space navigator like baobab
     killall
     lazygit
     libnotify
