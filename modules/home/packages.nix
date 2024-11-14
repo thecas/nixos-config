@@ -63,6 +63,9 @@ in
     zed-editor
     #vscode
 
+    #development
+    devbox
+
     ## Browsers
     #firefox-unwrapped
     #firefox-esr-128-unwrapped
