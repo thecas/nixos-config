@@ -9,7 +9,7 @@ in
     name = username;
     value = {
       isNormalUser = true;
-      extraGroups = [ "libvirtd docker" ];
+      extraGroups = [ "libvirtd" "docker" ];
     };
   }) usernames);
 
