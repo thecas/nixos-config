@@ -66,6 +66,9 @@ in
     #development
     devbox
 
+    #crypto
+    exodus
+
     ## Browsers
     #firefox-unwrapped
     #firefox-esr-128-unwrapped
