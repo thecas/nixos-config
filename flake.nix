@@ -17,8 +17,8 @@
     alejandra.url = "github:kamadorueda/alejandra/3.0.0";
 
     nix-gaming.url = "github:fufexan/nix-gaming";
-    zen-browser.url = "github:ch4og/zen-browser-flake";
-
+    #zen-browser.url = "github:ch4og/zen-browser-flake";
+    zen-browser.url = "github:fufexan/zen-browser-flake";
 
     hyprland = {
       type = "git";
@@ -41,6 +41,11 @@
     wezterm = {
       url = "github:wez/wezterm/main?dir=nix";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    yazi-plugins = {
+      url = "github:yazi-rs/plugins";
+      flake = false;
     };
 
   };

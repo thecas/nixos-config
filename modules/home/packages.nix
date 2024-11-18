@@ -28,7 +28,7 @@ in
     killall
     lazygit
     libnotify
-	man-pages					            	  # extra man pages
+    man-pages					            	  # extra man pages
     mimeo
     mpv                               # video player
     ncdu                              # disk space
@@ -50,7 +50,6 @@ in
     valgrind                          # c memory analyzer
     wl-clipboard                      # clipboard utils for wayland (wl-copy, wl-paste)
     wget
-    yazi                              # terminal file manager
     yt-dlp-light
     xdg-utils
     xxd

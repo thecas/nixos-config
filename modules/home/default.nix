@@ -4,7 +4,7 @@
     ./audacious.nix                   # music player
     ./bat.nix                         # better cat command
     ./btop.nix                        # resouces monitor
-###   ./cava.nix                        # audio visualizer
+    #./cava.nix                        # audio visualizer
     ./discord/discord.nix             # discord with gruvbox
     ./fastfetch.nix                   # fetch tool
     ./floorp/floorp.nix               # firefox based browser
@@ -34,6 +34,7 @@
     ./waybar                          # status bar
     ./wezterm.nix                     # terminal
     ./xdg-mimes.nix                   # xdg config
+    ./yazi.nix			      # termininal file manager
     ./zsh                             # shell
   ];
 }
