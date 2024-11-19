@@ -110,7 +110,7 @@ in
     wineWowPackages.wayland
     zenity
     zoom-us
-
+    obsidian
 
     # C / C++
     gcc

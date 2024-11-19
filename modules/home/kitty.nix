@@ -1,23 +1,30 @@
-
 { pkgs, host, ... }:
 {
   programs.kitty = {
     enable = true;
 
     themeFile = "gruvbox-dark-hard";
-
+    
     font = {
-      name = "CaskaydiaCove Nerd Font";
+      name = "Maple Mono";
       size = 12;
     };
 
+    extraConfig = ''
+      font_features MapleMono-Regular +ss01 +ss02 +ss04
+      font_features MapleMono-Bold +ss01 +ss02 +ss04
+      font_features MapleMono-Italic +ss01 +ss02 +ss04
+      font_features MapleMono-Light +ss01 +ss02 +ss04
+    '';
+
     settings = {
       confirm_os_window_close = 0;
-      background_opacity = "0.80";
+      background_opacity = "0.66";
       scrollback_lines = 10000;
       enable_audio_bell = false;
       mouse_hide_wait = 60;
-
+      window_padding_width = if (host == "laptop") then 5 else 10;
+      
       ## Tabs
       tab_title_template = "{index}";
       active_tab_font_style = "normal";
@@ -30,7 +37,7 @@
       inactive_tab_background = "#3C3836";
     };
 
-    keybindings = {
+    keybindings = {  
       ## Tabs
       "alt+1" = "goto_tab 1";
       "alt+2" = "goto_tab 2";
@@ -43,3 +50,4 @@
     };
   };
 }
+

@@ -85,10 +85,8 @@
 
         blur = {
           enabled = true;
-          size = 2;
+          size = 3;
           passes = 2;
-          # size = 4;
-          # passes = 2;
           brightness = 1;
           contrast = 1.400;
           ignore_opacity = true;
@@ -97,13 +95,16 @@
           xray = true;
         };
 
-        #drop_shadow = true;
+        shadow = {
+          enabled = true;
 
-        #shadow_ignore_window = true;
-        #shadow_offset = "0 2";
-        #shadow_range = 20;
-        #shadow_render_power = 3;
-        #"col.shadow" = "rgba(00000055)";
+          ignore_window = true;
+          offset = "0 2";
+          range = 20;
+          render_power = 3;
+          color = "rgba(00000055)";
+        };
+
       };
 
       animations = {
@@ -352,6 +353,26 @@
         "noinitialfocus,class:^(xwaylandvideobridge)$"
         "maxsize 1 1,class:^(xwaylandvideobridge)$"
         "noblur,class:^(xwaylandvideobridge)$"
+
+	# No gaps when only
+        "bordersize 0, floating:0, onworkspace:w[t1]"
+        "rounding 0, floating:0, onworkspace:w[t1]"
+        "bordersize 0, floating:0, onworkspace:w[tg1]"
+        "rounding 0, floating:0, onworkspace:w[tg1]"
+        "bordersize 0, floating:0, onworkspace:f[1]"
+        "rounding 0, floating:0, onworkspace:f[1]"
+
+        # Remove context menu transparency in chromium based apps
+        "opaque,class:^()$,title:^()$"
+        "noshadow,class:^()$,title:^()$"
+        "noblur,class:^()$,title:^()$"
+      ];
+
+      # No gaps when only
+      workspace = [
+        "w[t1], gapsout:0, gapsin:0"
+        "w[tg1], gapsout:0, gapsin:0"
+        "f[1], gapsout:0, gapsin:0"
       ];
 
     };
