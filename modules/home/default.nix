@@ -20,7 +20,6 @@
     ./micro.nix                       # nano replacement
     ./nemo.nix                        # file manager
     ./nvim.nix                        # neovim editor
-    ./openrgb.nix		      # Controll rbg leds of various devices	
     ./p10k/p10k.nix
     ./packages.nix                    # other packages
     ./retroarch.nix
