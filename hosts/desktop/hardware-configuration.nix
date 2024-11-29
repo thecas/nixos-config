@@ -38,11 +38,7 @@
   services.hardware.openrgb = { 
     enable = true; 
     package = pkgs.openrgb-with-all-plugins; 
-    motherboard = "amd"; 
-    server = { 
-      port = 6742; 
-      autoStart = true; 
-    }; 
+    motherboard = "amd";
   };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

@@ -235,15 +235,19 @@
         "$mainMod ALT, k, moveactive, 0 -80"
         "$mainMod ALT, l, moveactive, 80 0"
 
-        "bind = $mainMod, z, exec, zen"
-        "bind = $mainMod SHIFT, b, exec, firefox"
-        "bind = $mainMod SHIFT, z, exec, zeditor"
-        "bind = $mainMod SHIFT, p, exec, kitty --class ncpamixer -e ncpamixer"
-        "bind = $mainMod SHIFT, f, exec, ferdium --ozone-platform=wayland --enable-features-WaylandWindowDecorations"
-        "bind = $mainModSHIFT, c, exec, kitty --class clipse -e clipse"
-
-
-        # media and volume controls
+        "$mainMod, z, exec, zen"
+        "$mainMod SHIFT, b, exec, firefox"
+        "$mainMod SHIFT, z, exec, zeditor"
+        "$mainMod SHIFT, p, exec, kitty --class ncpamixer -e ncpamixer"
+        "$mainMod SHIFT, f, exec, ferdium --ozone-platform=wayland --enable-features-WaylandWindowDecorations"
+        "$mainModSHIFT, c, exec, kitty --class clipse -e clipse"
+	
+	# flipper on Alienware keyboard (wev, SUPER to check keycodes)
+	", code:173, workspace, e-1"
+	", code:171, workspace, e+1"
+	", code:172, exec, hyprlock"
+        
+	# media and volume controls
         # ",XF86AudioMute,exec, pamixer -t"
         ",XF86AudioPlay,exec, playerctl play-pause"
         ",XF86AudioNext,exec, playerctl next"
