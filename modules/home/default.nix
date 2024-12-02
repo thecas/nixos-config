@@ -22,7 +22,7 @@
     ./nvim.nix                        # neovim editor
     ./p10k/p10k.nix
     ./packages.nix                    # other packages
-    ./retroarch.nix
+    #./retroarch.nix
     ./rofi.nix                        # launcher
     ./scripts/scripts.nix             # personal scripts
     #./spicetify.nix                   # spotify client
