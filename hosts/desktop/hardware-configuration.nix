@@ -34,7 +34,10 @@
   };
   services.blueman.enable = true;
 
-
+  hardware.opengl.extraPackages = with pkgs; [
+    rocmPackages.clr.icd
+  ];
+  
   services.hardware.openrgb = { 
     enable = true; 
     package = pkgs.openrgb-with-all-plugins; 
