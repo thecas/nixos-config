@@ -21,6 +21,10 @@
   ];
 
   services.fwupd.enable = true;
+  
+
+  environment.variables.EDITOR = "vim";
+
 
   time.timeZone = "Europe/Amsterdam";
   i18n.defaultLocale = "en_US.UTF-8";
