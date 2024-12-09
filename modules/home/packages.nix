@@ -60,6 +60,7 @@ in
     ##Editor
     jetbrains.phpstorm
     zed-editor
+    nil
     #vscode
 
     #development
