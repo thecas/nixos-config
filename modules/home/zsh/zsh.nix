@@ -95,6 +95,10 @@
       zstyle ':fzf-tab:*' fzf-pad 4
       zstyle ':fzf-tab:*' fzf-min-height 100
       zstyle ':fzf-tab:*' switch-group ',' '.'
+
+      # Funtoo keychain ssh (so you do not need to type the password all the time)
+      zstyle :omz:plugins:ssh-agent ssh-add-args -K -c -a /run/user/1000/ssh-auth
+
     '';
 
 

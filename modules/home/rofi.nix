@@ -34,7 +34,7 @@
       display-window: " Window ";
       /* display-Network: " Network"; */
       sidebar-mode: true;
-      sorting-method: "fzf";
+      sorting-method: "levenshtein";
     }
 
     @theme "theme"
