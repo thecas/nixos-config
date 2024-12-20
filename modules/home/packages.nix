@@ -113,6 +113,9 @@ in
     zoom-us
     obsidian
 
+    #Networking
+    wireguard-tools
+
     # C / C++
     gcc
     gdb
