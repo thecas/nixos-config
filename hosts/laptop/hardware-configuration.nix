@@ -11,9 +11,10 @@
   boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ ];
-  #boot.kernelModules = [ "kvm-intel" ];
-  #boot.kernelParams = [ "intel_pstate=active" ];
   boot.extraModulePackages = [ ];
+
+  # boot.kernelModules = [ "kvm-intel" ];
+  # boot.kernelParams = [ "intel_pstate=active" ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
