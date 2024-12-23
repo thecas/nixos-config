@@ -11,7 +11,7 @@
   };
   nixpkgs = {
     overlays = [
-      inputs.nur.overlay
+      inputs.nur.overlays.default
     ];
   };
 
@@ -21,7 +21,7 @@
   ];
 
   services.fwupd.enable = true;
-  
+
 
   environment.variables.EDITOR = "vim";
 
