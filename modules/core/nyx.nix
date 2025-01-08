@@ -1,6 +1,6 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
-  environment.systemPackages = [ pkgs.lan-mouse_git ];
-  chaotic.mesa-git.enable = true;
-  boot.kernelPackages = pkgs.linuxPackages_cachyos;
+  environment.systemPackages = [ inputs.chaotic.pkgs.lan-mouse_git ];
+  inputs.chaotic.mesa-git.enable = true;
+  boot.kernelPackages = inputs.chaotic.pkgs.linuxPackages_cachyos;
 }
