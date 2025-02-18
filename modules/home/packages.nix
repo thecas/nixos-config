@@ -57,8 +57,8 @@ in
     sshfs
     cheese
 
-    ##Editor
-    jetbrains.phpstorm
+    ##Editors
+    #jetbrains.phpstorm
     zed-editor
     nil
     #vscode
