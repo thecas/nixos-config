@@ -56,6 +56,7 @@ in
     imgcat
     sshfs
     cheese
+    signal-desktop
 
     ##Editors
     #jetbrains.phpstorm
@@ -115,7 +116,8 @@ in
 
     #Networking
     wireguard-tools
-
+    protonvpn-gui
+    
     # C / C++
     gcc
     gdb
