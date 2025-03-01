@@ -66,6 +66,9 @@ in
 
     #development
     devbox
+    
+    #Android
+    android-tools
 
     #crypto
     exodus
