@@ -47,7 +47,6 @@
         border_size = 2;
         "col.active_border" = "rgb(98971A)";
         "col.inactive_border" = "rgb(928374)";
-        border_part_of_window = false;
         no_border_on_floating = false;
       };
 
