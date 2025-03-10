@@ -118,7 +118,7 @@ in
     obsidian
 
     #Networking
-    wireguard-tools
+    #wireguard-tools
     protonvpn-gui
     
     # C / C++

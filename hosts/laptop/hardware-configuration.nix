@@ -35,8 +35,8 @@
 
   #ipu6 webcam
   #hardware.ipu6 = {
-    #enable = true;
-    #platform = "ipu6ep";
+  #  enable = true;
+  #  platform = "ipu6ep";
   #};
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";

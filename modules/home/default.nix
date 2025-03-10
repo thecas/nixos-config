@@ -29,7 +29,7 @@
     ./starship.nix                    # shell prompt
     ./swaylock.nix                    # lock screen
     ./viewnior.nix                    # image viewer
-    ./vscodium.nix                    # vscode forck
+    #./vscodium.nix                    # vscode forck
     ./waybar                          # status bar
     ./wezterm.nix                     # terminal
     ./xdg-mimes.nix                   # xdg config
