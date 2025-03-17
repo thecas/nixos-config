@@ -61,12 +61,13 @@ in
     ##Editors
     #jetbrains.phpstorm
     zed-editor
+    nixd
     nil
     #vscode
 
     #development
     devbox
-    
+
     #Android
     android-tools
 
@@ -120,7 +121,7 @@ in
     #Networking
     #wireguard-tools
     protonvpn-gui
-    
+
     # C / C++
     gcc
     gdb
