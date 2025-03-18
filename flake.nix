@@ -6,7 +6,7 @@
     nur.url = "github:nix-community/NUR";
 
     disko = {
-      url = github:nix-community/disko;
+      url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -45,7 +45,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    
+
     yazi.url = "github:sxyazi/yazi";
 
     yazi-plugins = {
@@ -59,11 +59,7 @@
   let
     usernames = [ "cas" "ryan" ];
     system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
-    };
-    lib = nixpkgs.lib;
+
   in
   {
     nixosConfigurations = {
