@@ -1,4 +1,4 @@
-{ pkgs, config, inputs, ... }: 
+{ pkgs, ... }:
 {
   home.packages = with pkgs;[
     ## Utils
@@ -14,7 +14,7 @@
     _2048-in-terminal
     vitetris
     nethack
-    
+
     ## Celeste
     celeste-classic
     celeste-classic-pm

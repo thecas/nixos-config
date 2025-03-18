@@ -1,4 +1,4 @@
-{ pkgs, lib, config, inputs, ... }: 
+{ pkgs, ... }:
 {
   programs.swaylock = {
     enable = true;
@@ -10,15 +10,15 @@
       datestr = "";
       screenshots = true;
       ignore-empty-password=true;
-      
+
       indicator = true;
       indicator-radius = 111;
       indicator-thickness = 9;
-      
+
       effect-blur = "7x5";
       effect-vignette = "0.75:0.75";
       effect-pixelate = 5;
-      
+
       font="JetBrainsMono Nerd Font";
 
       text-wrong-color="FBF1C7FF";
