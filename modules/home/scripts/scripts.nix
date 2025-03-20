@@ -5,6 +5,7 @@
   runbg = pkgs.writeShellScriptBin "runbg" (builtins.readFile ./scripts/runbg.sh);
   music = pkgs.writeShellScriptBin "music" (builtins.readFile ./scripts/music.sh);
   lofi = pkgs.writeScriptBin "lofi" (builtins.readFile ./scripts/lofi.sh);
+  radio1 = pkgs.writeScriptBin "radio1" (builtins.readFile ./scripts/radio1.sh);
 
   toggle_blur = pkgs.writeScriptBin "toggle_blur" (builtins.readFile ./scripts/toggle_blur.sh);
   toggle_oppacity = pkgs.writeScriptBin "toggle_oppacity" (builtins.readFile ./scripts/toggle_oppacity.sh);
@@ -53,6 +54,9 @@ in {
     runbg
     music
     lofi
+    radio1
+    video
+    tailscale-status
 
     #laptop
     sound
