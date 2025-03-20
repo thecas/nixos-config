@@ -240,12 +240,12 @@
         "$mainMod SHIFT, p, exec, kitty --class ncpamixer -e ncpamixer"
         "$mainMod SHIFT, f, exec, ferdium --ozone-platform=wayland --enable-features-WaylandWindowDecorations"
         "$mainModSHIFT, c, exec, kitty --class clipse -e clipse"
-	
+
 	# flipper on Alienware keyboard (wev, SUPER to check keycodes)
 	", code:173, workspace, e-1"
 	", code:171, workspace, e+1"
 	", code:172, exec, hyprlock"
-        
+
 	# media and volume controls
         # ",XF86AudioMute,exec, pamixer -t"
         ",XF86AudioPlay,exec, playerctl play-pause"
@@ -283,21 +283,21 @@
 
       # windowrule
       windowrule = [
-        "float,Viewnior"
-        "center,Viewnior"
-        "size 1200 800,Viewnior"
-        "float,imv"
-        "center,imv"
-        "size 1200 725,imv"
+#        "float,Viewnior"
+#        "center,Viewnior"
+#        "size 1200 800,Viewnior"
+#        "float,imv"
+#        "center,imv"
+#        "size 1200 725,imv"
         #"float,mpv"
         #"center,mpv"
-        "tile,Aseprite"
+#        "tile,Aseprite"
         #"size 1200 725,mpv"
-        "float,audacious"
-        "pin,rofi"
-        "tile, neovide"
-        "idleinhibit focus,mpv"
-        "float,udiskie"
+#        "float,audacious"
+#        "pin,rofi"
+#        "tile, neovide"
+#        "idleinhibit focus,mpv"
+#        "float,udiskie"
         "float,title:^(Transmission)$"
         "float,title:^(Volume Control)$"
         "float,title:^(Firefox — Sharing Indicator)$"
