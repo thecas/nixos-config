@@ -89,6 +89,7 @@ in
     ## audio
     ncpamixer
     pavucontrol
+    helvum
     #spotify
 
     ## CLI

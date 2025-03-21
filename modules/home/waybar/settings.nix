@@ -115,9 +115,10 @@ in
         scroll-step= 2;
         on-click= "pamixer -t";
         on-click-right = "pavucontrol";
-
-
+        on-middle-click = "helvum";
+        on-double-click = "helvum";
     };
+
     battery = {
         format = "<span foreground='${yellow}'>{icon}</span> {capacity}%";
         format-icons = [" " " " " " " " " "];
